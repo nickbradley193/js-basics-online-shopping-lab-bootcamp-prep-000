@@ -27,7 +27,9 @@ function viewCart() {
   }
   var cartString = 'In your cart, you have';
   for (var itemNumber = 0; itemNumber < cart.length; itemNumber++) {
-    if (itemNumber > 0) {
+    if (itemNumber = cart.length-1) {
+      cartString = `${cartString}, and`
+    } else if (itemNumber > 0) {
       cartString = `${cartString},`;
     }
     cartString = `${cartString} ${cart[itemNumber].itemName} at $${cart[itemNumber].itemPrice}`;
